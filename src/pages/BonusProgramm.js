@@ -2,6 +2,7 @@ import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 import category from "../database/data-category";
 import { Link } from "react-router-dom";
+import HeaderSlider from "../component/HeaderSlider";
 
 function BonusProgramm() {
 
@@ -9,20 +10,14 @@ function BonusProgramm() {
         <div className="App">
             <Header />
 
-            <div className="container">
-                <div className="slider-menu ">
-                    <img src="./img/slider/menu-slider.jpg" alt="Slides" />
-                    <button className="btn-fill"> В каталог</button>
-                </div>
-            </div>
-
+            <HeaderSlider />
 
             <div className="container">
                 <div className="currentPage">
                     <ul>
                         <li><Link to="/">Главная</Link></li>
                         <li>
-                            <img src="../img/pointer.svg" alt="poiner" />
+                            <img src="./img/pointer.svg" alt="poiner" />
                         </li>
                         <li><Link to="/bonus" id="bonus">Бонусная программа</Link></li>
                     </ul>

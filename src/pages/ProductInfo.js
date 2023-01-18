@@ -30,17 +30,17 @@ function Item() {
                     <ul>
                         <li><Link to="/">Главная</Link></li>
                         <li>
-                            <img src="../img/pointer.svg" alt="poiner" />
+                            <img src="./img/pointer.svg" alt="poiner" />
                         </li>
                         <li><Link to="/catalog">Каталог</Link></li>
                         <li>
-                            <img src="../img/pointer.svg" alt="poiner" />
+                            <img src="./img/pointer.svg" alt="poiner" />
                         </li>
                         <li>
                             <Link to={`/category/${defaultItem.strCategory}`} state={{ from: defaultItem.strCategoryTitle }}>{defaultItem.strCategoryTitle}</Link>
                         </li>
                         <li>
-                            <img src="../img/pointer.svg" alt="poiner" />
+                            <img src="./img/pointer.svg" alt="poiner" />
                         </li>
                         <li>{from}</li>
                     </ul>

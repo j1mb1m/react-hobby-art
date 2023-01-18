@@ -22,7 +22,7 @@ function Delivery() {
                     <ul>
                         <li><Link to="/">Главная</Link></li>
                         <li>
-                            <img src="../img/pointer.svg" alt="poiner" />
+                            <img src="./img/pointer.svg" alt="poiner" />
                         </li>
                         <li><Link to="/delivery" id="delivery">Оплата и доставка</Link></li>
                     </ul>

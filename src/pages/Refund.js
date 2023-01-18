@@ -2,6 +2,7 @@ import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 import category from "../database/data-category";
 import { Link } from "react-router-dom";
+import HeaderSlider from "../component/HeaderSlider";
 
 function Refund() {
 
@@ -9,12 +10,7 @@ function Refund() {
         <div className="App">
             <Header />
 
-            <div className="container">
-                <div className="slider-menu ">
-                    <img src="./img/slider/menu-slider.jpg" alt="Slides" />
-                    <button className="btn-fill"> В каталог</button>
-                </div>
-            </div>
+            <HeaderSlider />
 
 
             <div className="container">
@@ -22,7 +18,7 @@ function Refund() {
                     <ul>
                         <li><Link to="/">Главная</Link></li>
                         <li>
-                            <img src="../img/pointer.svg" alt="poiner" />
+                            <img src="./img/pointer.svg" alt="poiner" />
                         </li>
                         <li><Link to="/about" id="about">О компании</Link></li>
                     </ul>

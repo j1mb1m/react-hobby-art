@@ -18,7 +18,7 @@ export default function Basket() {
                     <ul>
                         <li><Link to="/">Главная</Link></li>
                         <li>
-                            <img src="../img/pointer.svg" alt="poiner" />
+                            <img src="./img/pointer.svg" alt="poiner" />
                         </li>
                         <li><Link to="/basket">Корзина</Link></li>
                     </ul>
@@ -102,7 +102,7 @@ export default function Basket() {
 
                                     <div className={styles.price}>332 ₽</div>
                                     <div className={styles.deleteIcon}>
-                                        <img src="../img/delete-icon.svg" alt="Delete" />
+                                        <img src="./img/delete-icon.svg" alt="Delete" />
                                     </div>
                                 </div>
 
@@ -114,7 +114,7 @@ export default function Basket() {
 
                                     <div className={styles.price}>332 ₽</div>
                                     <div className={styles.deleteIcon}>
-                                        <img src="../img/delete-icon.svg" alt="Delete" />
+                                        <img src="./img/delete-icon.svg" alt="Delete" />
                                     </div>
                                 </div>
 

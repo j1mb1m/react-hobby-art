@@ -6,6 +6,7 @@ import Header from "./layout/Header";
 import Switch from "./component/Switch";
 import category from "./database/data-category";
 import Instagram from "./component/Instagram";
+import HeaderSlider from "./component/HeaderSlider";
 
 function App() {
   const [value, setValue] = useState(false);
@@ -13,12 +14,7 @@ function App() {
     <div className="App">
       <Header />
 
-      <div className="container">
-        <div className="slider-menu ">
-          <img src="./img/slider/menu-slider.jpg" alt="Slides" />
-          <button className="btn-fill"> В каталог</button>
-        </div>
-      </div>
+      <HeaderSlider />
 
 
       <div className="container">
