@@ -1,0 +1,74 @@
+@import "../index.scss";
+
+.footer {
+  height: auto;
+  width: 100%;
+  padding: 64px 0;
+  background: linear-gradient(267.48deg, #ECECD5 56.22%, #D7D7B9 130.03%);
+  @extend %montserrat-600-16;
+
+  .logo {
+    width: 99px;
+    height: 50.13px;
+    margin-bottom: 53px;
+  }
+
+  .flex-space-between {
+    align-items: flex-start;
+    gap: 70px;
+
+    div {
+      flex: 1;
+      width: max-content;
+
+      li {
+        margin-bottom: 38px;
+      }
+    }
+
+    div:nth-child(1) {
+      flex: 2;
+
+      li {
+        margin-bottom: 18px;
+      }
+    }
+
+    div:nth-child(4) {
+      flex: 2;
+
+      li {
+        margin-bottom: 31px;
+      }
+    }
+  }
+}
+
+.contacts {
+  @extend %montserrat-400-16;
+  font-style: normal;
+}
+
+.email-box {
+  background-color: #FFFFFF;
+  border-radius: 76px;
+  height: 50px;
+  box-sizing: content-box;
+
+  input {
+    outline: none;
+    border: none;
+    padding: 0;
+    height: auto;
+  }
+
+  .email-input {
+    width: 200px;
+    margin: 10px 0 10px 35px;
+    padding-right: 15px;
+  }
+}
+
+.callout {
+  margin-top: 8px;
+}

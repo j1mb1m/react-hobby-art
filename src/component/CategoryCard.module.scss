@@ -1,0 +1,31 @@
+.categoryCard {
+    position: relative;
+    flex: none;
+    width: 300px;
+    height: 487px;
+    background-image: linear-gradient(180deg, rgba(80, 80, 80, 0.08) 50.1%, rgba(46, 46, 46, 0.59) 100%); 
+    border-radius: 20px;
+    margin-right: 29px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  
+    p {
+      position: absolute;
+      bottom: 24px;
+      left: 34px;
+      right: 66px;
+    
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: #FFFFFF;
+    }
+
+/*     &:last-child {
+      margin-right: 0px;     
+    } */
+}

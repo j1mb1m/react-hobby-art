@@ -1,0 +1,156 @@
+@import "../index.scss";
+
+header,
+footer,
+.container,
+body {
+    background: #FFFFFF;
+}
+
+.currentPage {
+    margin-bottom: 58px;
+}
+
+.flex-left {
+    gap: 44px;
+}
+
+.itemColors {
+    width: 48%;
+    flex: none;
+
+    img {
+        height: 560px;
+        display: block;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        li {
+            margin-bottom: 11px;
+        }
+    }
+}
+
+.description {
+    margin-top: 24px;
+    margin-bottom: 40px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+
+    color: #424242;
+}
+
+
+.colorItem {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    margin-top: 15px;
+
+    border: 1.08889px solid transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activeColor {
+   border: 1.08889px solid #BDBDBD;
+}
+
+.color-circle {
+    width: 35px;
+    height: 35px;
+    margin: 0;
+}
+
+.tableInfo {
+
+    ul {
+        margin-bottom: 39px;
+    }
+
+    li {
+        display: flex;
+        justify-content: left;
+        border-bottom: 1px solid #BDBDBD;
+        width: 430px;
+        height: fit-content;
+        padding-bottom: 22px;
+        padding-top: 26px;
+
+
+        color: #424242;
+
+        div:first-child {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+
+            flex: none;
+            width: 275px;
+        }
+
+        div:last-child {
+            flex: content;
+        }
+    }
+}
+
+.flex-left {
+    margin-bottom: 41px;
+
+    .price {
+        line-height: 50px;
+        text-align: center;
+    }
+
+}
+
+
+.price {
+    @extend %montserrat-600-16;
+    font-weight: 600;
+    font-size: 28px;
+
+    span {
+        @extend %montserrat-600-16;
+        font-weight: 600;
+        font-size: 28px;
+    }
+
+    .new-price {
+        margin-left: 14px;
+    }
+
+    .old-price {
+        font-weight: 300;
+        font-size: 26px;
+    }
+
+}
+
+.reviews,
+.seeAlso {
+    margin-bottom: 40px;
+
+    h3 {
+        margin-bottom: 32px;
+    }
+}
+
+.seeAlso {
+    margin-bottom: 103px;
+}

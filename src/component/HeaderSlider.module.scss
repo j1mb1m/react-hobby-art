@@ -1,0 +1,85 @@
+.slider-menu {
+    position: relative;
+
+    button {
+        position: absolute;
+        left: 50%;
+        bottom: 20%;
+    }
+}
+
+.carouselItem {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 510px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    .caption {
+        margin-top: 140px;
+        max-width: 450px;
+    }
+
+    .image {
+        height: 90%;
+        width: 50%;
+        margin-top: 30px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    h1 {
+        margin: 0;
+        margin-bottom: 48px;
+    }
+
+    p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+
+        color: rgba(94, 92, 90, 0.8);
+    }
+
+}
+
+.active {
+    display: flex;
+    justify-content: left;
+    gap: 0px;
+}
+
+.slideNumber {
+    position: absolute;
+    bottom: 34px;
+    right: 15%;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    color: #424242;
+
+    .btnLeft {
+        width: 30px;
+        height: 30px;
+        background-image: url("../img/btn-left.svg");
+    }
+
+    .btnRight {
+        width: 30px;
+        height: 30px;
+        background-image: url("../img/btn-right.svg");
+    }
+}

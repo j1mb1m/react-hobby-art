@@ -1,0 +1,94 @@
+@import "../index.scss";
+
+
+.header {
+    background: inherit;
+
+    .menu-bottom {
+        @extend %montserrat-600-16;
+    }
+
+    .bg-color {
+        height: auto;
+        background: linear-gradient(102.48deg, #976464 -29.03%, #CFA5A5 97.75%);
+    }
+
+    .menu-top {
+        height: 45px;
+        color: #FFFFFF;
+
+        ul {
+
+            li {
+                margin-top: 14px;
+            }
+
+            img {
+                width: 15px;
+                height: 15px;
+                margin-right: 15px;
+                margin-bottom: -2px;
+            }
+        }
+    }
+
+    .menu-bottom {
+        display: grid;
+        grid-template-columns: 1fr 222px 1fr;
+        margin-top: 45px;
+        align-items: center;
+        color: #424242;
+        background: 1px solid red;
+
+        .logo {
+            width: 121.75px;
+            height: 61.65px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    }
+
+}
+
+.search-box {
+    border: 1px solid #BDBDBD;
+    border-radius: 46px;
+    width: 198px;
+    height: 38px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+    input {
+        outline: none;
+        border: none;
+        filter: none;
+        padding: 0;
+        height: auto;
+    }
+
+    .search-input {
+        width: 150px;
+        margin: 10px 0 10px 15px;
+        padding: 0;
+        filter: none;
+
+        background: inherit;
+    }
+
+    &:hover,
+    &:active {
+        border: 1px solid #CFA5A5;
+    }
+}
+
+.search-icon {
+    height: 11px;
+    width: 11px;
+    cursor: pointer;
+
+    display: inline;
+
+    img {
+        width: inherit;
+        height: inherit;
+    }
+}
