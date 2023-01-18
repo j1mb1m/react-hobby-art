@@ -7,12 +7,12 @@ const items = [
         price: 332,
         discount: 0,
         colors: [
-            { color: "#EEAA56", image: "../img/catalog/items/item01.png" },
-            { color: "#81292F", image: "../img/catalog/items/item01-2.png" },
-            { color: "#BDBDBD", image: "../img/catalog/items/item01-3.jpg" },
-            { color: "#D8C1AA", image: "../img/catalog/items/item01.png" },
-            { color: "#EED53A", image: "../img/catalog/items/item01-5.webp" },
-            { color: "#FFFFFF", image: "../img/catalog/items/item01-6.webp" }
+            { color: "#EEAA56", image: "./img/catalog/items/item01.png" },
+            { color: "#81292F", image: "./img/catalog/items/item01-2.png" },
+            { color: "#BDBDBD", image: "./img/catalog/items/item01-3.jpg" },
+            { color: "#D8C1AA", image: "./img/catalog/items/item01.png" },
+            { color: "#EED53A", image: "./img/catalog/items/item01-5.webp" },
+            { color: "#FFFFFF", image: "./img/catalog/items/item01-6.webp" }
         ],
         type: "Шпагат, шнуры, веревки",
         composition: [{ name: "Хлопок", quantity: 100 }],
@@ -20,7 +20,7 @@ const items = [
         producerCountry: "россия",
         diameter: "4 мм",
         itemLength: "100 м",
-        imageUrl: "../img/catalog/items/item01.png",
+        imageUrl: "./img/catalog/items/item01.png",
         feedbacks: [{
             user: "Евгения Доценко",
             dateTime: "13.06.2021 12:30",
@@ -54,9 +54,9 @@ const items = [
         price: 422,
         discount: 385,
         colors: [
-            { color: "#9D856B", image: "../img/catalog/items/item02.png" },
-            { color: "#B69882", image: "../img/catalog/items/item01-2.png" },
-            { color: "#CFBBAC", image: "../img/catalog/items/item01-3.jpg" }
+            { color: "#9D856B", image: "./img/catalog/items/item02.png" },
+            { color: "#B69882", image: "./img/catalog/items/item01-2.png" },
+            { color: "#CFBBAC", image: "./img/catalog/items/item01-3.jpg" }
         ],
         type: "Шпагат, шнуры, веревки",
         composition: [{ name: "Хлопок", quantity: 100 }],
@@ -64,7 +64,7 @@ const items = [
         producerCountry: "Украина",
         diameter: "3 мм",
         itemLength: "100 м",
-        imageUrl: "../img/catalog/items/item02.png",
+        imageUrl: "./img/catalog/items/item02.png",
         feedbacks: [],
         description: "Хлопковый шпагат для рукоделия 4 мм состоит из 100 тонких скрученных нитей. Для создания модных перьев (листьев), кисточек, панно, ловцов снов, брелков, украшений, салфеток, кашпо, наволочек и других изделий в технике макраме. Мягкий и приятный на ощупь, при желании, можно легко расплести в бахрому."
     },
@@ -76,11 +76,11 @@ const items = [
         price: 1092,
         discount: 0,
         colors: [
-            { color: "#FAF9F6", image: "../img/catalog/items/item03.png" },
-            { color: "#EBD5BC", image: "../img/catalog/items/item01-2.png" },
-            { color: "#0395AF", image: "../img/catalog/items/item01-3.jpg" },
-            { color: "#F09482", image: "../img/catalog/items/item01-2.png" },
-            { color: "#424242", image: "../img/catalog/items/item01-3.jpg" }
+            { color: "#FAF9F6", image: "./img/catalog/items/item03.png" },
+            { color: "#EBD5BC", image: "./img/catalog/items/item01-2.png" },
+            { color: "#0395AF", image: "./img/catalog/items/item01-3.jpg" },
+            { color: "#F09482", image: "./img/catalog/items/item01-2.png" },
+            { color: "#424242", image: "./img/catalog/items/item01-3.jpg" }
         ],
         type: "Пряжа",
         composition: [{ name: "Хлопок", quantity: 100 }],
@@ -88,7 +88,7 @@ const items = [
         producerCountry: "россия",
         diameter: "3 мм",
         itemLength: "100 м",
-        imageUrl: "../img/catalog/items/item03.png",
+        imageUrl: "./img/catalog/items/item03.png",
         feedbacks: [],
         description: "Хлопковый шпагат для рукоделия 4 мм состоит из 100 тонких скрученных нитей. Для создания модных перьев (листьев), кисточек, панно, ловцов снов, брелков, украшений, салфеток, кашпо, наволочек и других изделий в технике макраме. Мягкий и приятный на ощупь, при желании, можно легко расплести в бахрому."
     },
@@ -100,11 +100,11 @@ const items = [
         price: 1053,
         discount: 0,
         colors: [
-            { color: "#FAF9F6", image: "../img/catalog/items/item04.png" },
-            { color: "#EBD5BC", image: "../img/catalog/items/item04.png" },
-            { color: "#0395AF", image: "../img/catalog/items/item04.png" },
-            { color: "#F09482", image: "../img/catalog/items/item04.png" },
-            { color: "#424242", image: "../img/catalog/items/item04.png" }
+            { color: "#FAF9F6", image: "./img/catalog/items/item04.png" },
+            { color: "#EBD5BC", image: "./img/catalog/items/item04.png" },
+            { color: "#0395AF", image: "./img/catalog/items/item04.png" },
+            { color: "#F09482", image: "./img/catalog/items/item04.png" },
+            { color: "#424242", image: "./img/catalog/items/item04.png" }
         ],
         type: "Пряжа",
         composition: [{ name: "Хлопок", quantity: 100 }],
@@ -112,7 +112,7 @@ const items = [
         producerCountry: "россия",
         diameter: "4 мм",
         itemLength: "100 м",
-        imageUrl: "../img/catalog/items/item04.png",
+        imageUrl: "./img/catalog/items/item04.png",
         feedbacks: [],
         description: "Хлопковый шпагат для рукоделия 4 мм состоит из 100 тонких скрученных нитей. Для создания модных перьев (листьев), кисточек, панно, ловцов снов, брелков, украшений, салфеток, кашпо, наволочек и других изделий в технике макраме. Мягкий и приятный на ощупь, при желании, можно легко расплести в бахрому."
     },
@@ -124,11 +124,11 @@ const items = [
         price: 1053,
         discount: 0,
         colors: [
-            { color: "#E5D8CB", image: "../img/catalog/items/item05.png" },
-            { color: "#C51212", image: "../img/catalog/items/item05.png" },
-            { color: "#FC9257", image: "../img/catalog/items/item05.png" },
-            { color: "#1C1C1C", image: "../img/catalog/items/item05.png" },
-            { color: "#424242", image: "../img/catalog/items/item05.png" }
+            { color: "#E5D8CB", image: "./img/catalog/items/item05.png" },
+            { color: "#C51212", image: "./img/catalog/items/item05.png" },
+            { color: "#FC9257", image: "./img/catalog/items/item05.png" },
+            { color: "#1C1C1C", image: "./img/catalog/items/item05.png" },
+            { color: "#424242", image: "./img/catalog/items/item05.png" }
         ],
         type: "Шпагат, шнуры, веревки",
         composition: [{ name: "Хлопок", quantity: 100 }],
@@ -136,7 +136,7 @@ const items = [
         producerCountry: "россия",
         diameter: "0.8 мм",
         itemLength: "100 м",
-        imageUrl: "../img/catalog/items/item05.png",
+        imageUrl: "./img/catalog/items/item05.png",
         feedbacks: [],
         description: "Хлопковый шпагат для рукоделия 4 мм состоит из 100 тонких скрученных нитей. Для создания модных перьев (листьев), кисточек, панно, ловцов снов, брелков, украшений, салфеток, кашпо, наволочек и других изделий в технике макраме. Мягкий и приятный на ощупь, при желании, можно легко расплести в бахрому."
     },
@@ -148,11 +148,11 @@ const items = [
         price: 617,
         discount: 0,
         colors: [
-            { color: "#FCF7F4", image: "../img/catalog/items/item06.png" },
-            { color: "#FAF0E2", image: "../img/catalog/items/item06.png" },
-            { color: "#F24135", image: "../img/catalog/items/item06.png" },
-            { color: "#0395AF", image: "../img/catalog/items/item06.png" },
-            { color: "#424242", image: "../img/catalog/items/item06.png" }
+            { color: "#FCF7F4", image: "./img/catalog/items/item06.png" },
+            { color: "#FAF0E2", image: "./img/catalog/items/item06.png" },
+            { color: "#F24135", image: "./img/catalog/items/item06.png" },
+            { color: "#0395AF", image: "./img/catalog/items/item06.png" },
+            { color: "#424242", image: "./img/catalog/items/item06.png" }
         ],
         type: "Шпагат, шнуры, веревки",
         composition: [{ name: "Хлопок", quantity: 100 }],
@@ -160,7 +160,7 @@ const items = [
         producerCountry: "россия",
         diameter: "4 мм",
         itemLength: "100 м",
-        imageUrl: "../img/catalog/items/item06.png",
+        imageUrl: "./img/catalog/items/item06.png",
         feedbacks: [],
         description: "Хлопковый шпагат для рукоделия 4 мм состоит из 100 тонких скрученных нитей. Для создания модных перьев (листьев), кисточек, панно, ловцов снов, брелков, украшений, салфеток, кашпо, наволочек и других изделий в технике макраме. Мягкий и приятный на ощупь, при желании, можно легко расплести в бахрому."
     },
@@ -172,11 +172,11 @@ const items = [
         price: 617,
         discount: 0,
         colors: [
-            { color: "#FCF7F4", image: "../img/catalog/items/item06.png" },
-            { color: "#FAF0E2", image: "../img/catalog/items/item06.png" },
-            { color: "#F24135", image: "../img/catalog/items/item06.png" },
-            { color: "#0395AF", image: "../img/catalog/items/item06.png" },
-            { color: "#424242", image: "../img/catalog/items/item06.png" }
+            { color: "#FCF7F4", image: "./img/catalog/items/item06.png" },
+            { color: "#FAF0E2", image: "./img/catalog/items/item06.png" },
+            { color: "#F24135", image: "./img/catalog/items/item06.png" },
+            { color: "#0395AF", image: "./img/catalog/items/item06.png" },
+            { color: "#424242", image: "./img/catalog/items/item06.png" }
         ],
         type: "Шпагат, шнуры, веревки",
         composition: [{ name: "Хлопок", quantity: 100 }],
@@ -184,7 +184,7 @@ const items = [
         producerCountry: "россия",
         diameter: "4 мм",
         itemLength: "100 м",
-        imageUrl: "../img/catalog/items/item06.png",
+        imageUrl: "./img/catalog/items/item06.png",
         feedbacks: [],
         description: "Хлопковый шпагат для рукоделия 4 мм состоит из 100 тонких скрученных нитей. Для создания модных перьев (листьев), кисточек, панно, ловцов снов, брелков, украшений, салфеток, кашпо, наволочек и других изделий в технике макраме. Мягкий и приятный на ощупь, при желании, можно легко расплести в бахрому."
     },
@@ -196,18 +196,18 @@ const items = [
         price: 360,
         discount: 0,
         colors: [
-            { color: "#696837", image: "../img/catalog/items/item08.png" },
-            { color: "#81292F", image: "../img/catalog/items/item08.png" },
-            { color: "#D8C1AA", image: "../img/catalog/items/item08.png" },
-            { color: "#EED53A", image: "../img/catalog/items/item08.png" },
-            { color: "#424242", image: "../img/catalog/items/item08.png" }
+            { color: "#696837", image: "./img/catalog/items/item08.png" },
+            { color: "#81292F", image: "./img/catalog/items/item08.png" },
+            { color: "#D8C1AA", image: "./img/catalog/items/item08.png" },
+            { color: "#EED53A", image: "./img/catalog/items/item08.png" },
+            { color: "#424242", image: "./img/catalog/items/item08.png" }
         ],
         type: "Пряжа",
         composition: [{ name: "Хлопок", quantity: 100 }],
         producer: "Зефирка",
         producerCountry: "россия",
         diameter: "4 мм",
-        imageUrl: "../img/catalog/items/item08.png",
+        imageUrl: "./img/catalog/items/item08.png",
         weight: "380 г",
         itemLength: "100 м",
         feedbacks: [],
@@ -221,13 +221,13 @@ const items = [
         price: 170,
         discount: 135,
         colors: [
-            { color: "#696837", image: "../img/catalog/items/item09.png" },
-            { color: "#81292F", image: "../img/catalog/items/item09.png" },
-            { color: "#D8C1AA", image: "../img/catalog/items/item09.png" },
-            { color: "#EED53A", image: "../img/catalog/items/item09.png" },
-            { color: "#424242", image: "../img/catalog/items/item09.png" }
+            { color: "#696837", image: "./img/catalog/items/item09.png" },
+            { color: "#81292F", image: "./img/catalog/items/item09.png" },
+            { color: "#D8C1AA", image: "./img/catalog/items/item09.png" },
+            { color: "#EED53A", image: "./img/catalog/items/item09.png" },
+            { color: "#424242", image: "./img/catalog/items/item09.png" }
         ],
-        imageUrl: "../img/catalog/items/item09.png",
+        imageUrl: "./img/catalog/items/item09.png",
         type: "Пряжа",
         composition: [{ name: "Хлопок", quantity: 100 }],
         producer: "Гамма",
@@ -246,23 +246,23 @@ const items = [
         price: 510,
         discount: 0,
         colors: [
-            { color: "#FAF9F6", image: "../img/catalog/items/item10.png" },
-            { color: "#EBD5BC", image: "../img/catalog/items/item10.png" },
-            { color: "#0395AF", image: "../img/catalog/items/item10.png" },
-            { color: "#F09482", image: "../img/catalog/items/item10.png" },
-            { color: "#2C66A5", image: "../img/catalog/items/item10.png" },
-            { color: "#1FA866", image: "../img/catalog/items/item10.png" },
-            { color: "#FFB565", image: "../img/catalog/items/item10.png" },
-            { color: "#FF65C1", image: "../img/catalog/items/item10.png" },
-            { color: "#696837", image: "../img/catalog/items/item10.png" },
-            { color: "#FFFFFF", image: "../img/catalog/items/item10.png" },
-            { color: "#BDBDBD", image: "../img/catalog/items/item10.png" },
-            { color: "#81292F", image: "../img/catalog/items/item10.png" },
-            { color: "#D8C1AA", image: "../img/catalog/items/item10.png" },
-            { color: "#EED53A", image: "../img/catalog/items/item10.png" },
-            { color: "#424242", image: "../img/catalog/items/item10.png" }
+            { color: "#FAF9F6", image: "./img/catalog/items/item10.png" },
+            { color: "#EBD5BC", image: "./img/catalog/items/item10.png" },
+            { color: "#0395AF", image: "./img/catalog/items/item10.png" },
+            { color: "#F09482", image: "./img/catalog/items/item10.png" },
+            { color: "#2C66A5", image: "./img/catalog/items/item10.png" },
+            { color: "#1FA866", image: "./img/catalog/items/item10.png" },
+            { color: "#FFB565", image: "./img/catalog/items/item10.png" },
+            { color: "#FF65C1", image: "./img/catalog/items/item10.png" },
+            { color: "#696837", image: "./img/catalog/items/item10.png" },
+            { color: "#FFFFFF", image: "./img/catalog/items/item10.png" },
+            { color: "#BDBDBD", image: "./img/catalog/items/item10.png" },
+            { color: "#81292F", image: "./img/catalog/items/item10.png" },
+            { color: "#D8C1AA", image: "./img/catalog/items/item10.png" },
+            { color: "#EED53A", image: "./img/catalog/items/item10.png" },
+            { color: "#424242", image: "./img/catalog/items/item10.png" }
         ],
-        imageUrl: "../img/catalog/items/item10.png",
+        imageUrl: "./img/catalog/items/item10.png",
         type: "Пряжа",
         producer: "Macrametr",
         producerCountry: "россия",
