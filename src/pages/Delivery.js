@@ -2,6 +2,7 @@ import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 import category from "../database/data-category";
 import { Link } from "react-router-dom";
+import HeaderSlider from "../component/HeaderSlider";
 
 function Delivery() {
 
@@ -9,12 +10,7 @@ function Delivery() {
         <div className="App">
             <Header />
 
-            <div className="container">
-                <div className="slider-menu ">
-                    <img src="./img/slider/menu-slider.jpg" alt="Slides" />
-                    <button className="btn-fill"> В каталог</button>
-                </div>
-            </div>
+            <HeaderSlider />
 
 
             <div className="container">
