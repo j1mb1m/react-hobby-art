@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import MyCarousel from "./component/CategoryCarousel";
+import CategoryCarousel from "./component/CategoryCarousel";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import Switch from "./component/Switch";
 import category from "./database/data-category";
 import Instagram from "./component/Instagram";
 import HeaderSlider from "./component/HeaderSlider";
+import Advantage from "./component/Advantage";
 
 function App() {
   const [value, setValue] = useState(false);
@@ -27,7 +28,7 @@ function App() {
           <p className={value ? "upper-case gradient-text" : "upper-case"}  >Популярное</p>
         </div>
 
-        <MyCarousel isPopular={value} />
+        <CategoryCarousel isPopular={value} />
       </div>
 
 
@@ -53,35 +54,7 @@ function App() {
       </div>
 
       {/* ---- наши плюсы ------ */}
-      <div className="container">
-        <h1>Хобби арт: 9 лет на рынке</h1>
-        <div className="grid-3-col">
-          <div className="dignity">
-            <img src="./img/suppliers-icon.svg" alt="Поставщики" />
-            <div>
-              <h2>Поставщики</h2>
-              <p>Мы работаем только с надежными
-                и проверенными поставщиками товаров
-                для творчества</p>
-            </div>
-          </div>
-          <div className="dignity">
-            <img src="./img/goods-icon.svg" alt="Товары" />
-            <div>
-              <h2>Товары</h2>
-              <p>Мы привозим актуальные и новые товары, инструменты для вашего творчества по низким ценам</p>
-            </div>
-          </div>
-
-          <div className="dignity">
-            <img src="./img/bonus-icon.svg" alt="Бонусы" />
-            <div>
-              <h2>Бонусы</h2>
-              <p>У нас действует накопительная бонусная система скидок. Дарим в день рождения 500 бонусных рублей</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Advantage />
 
       {/* ---- insta ------ */}
       <Instagram />

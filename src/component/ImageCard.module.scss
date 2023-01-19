@@ -24,8 +24,10 @@
       line-height: 22px;
       color: #FFFFFF;
     }
-
-/*     &:last-child {
-      margin-right: 0px;     
-    } */
+}
+@media(max-width: 1150px) {
+  .imageCard {
+    width: 200px;
+    height: 325px;
+  }
 }

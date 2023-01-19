@@ -1,4 +1,4 @@
-.slider-menu {
+.item {
     position: relative;
 
     button {
@@ -45,6 +45,7 @@
         color: rgba(94, 92, 90, 0.8);
     }
 
+
 }
 
 .active {
@@ -82,4 +83,142 @@
         height: 30px;
         background-image: url("../img/btn-right.svg");
     }
+}
+
+@media(max-width: 1800px) {
+    .carouselItem {
+        height: 480px;
+    }
+}
+
+@media(max-width: 1600px) {
+    .carouselItem {
+        height: 450px;
+
+        h1 {
+            margin-bottom: 35px;
+        }
+
+        p {
+            font-size: 16px;
+            max-width: 400px;
+        }
+
+        .caption {
+            margin-top: 120px;
+
+        }
+    }
+}
+
+@media(max-width: 1450px) {
+    .carouselItem {
+        height: 400px;
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .caption {
+            margin-top: 100px;
+        }
+    }
+}
+
+@media(max-width: 1300px) {
+    .carouselItem {
+        height: 350px;
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .caption {
+            margin-top: 90px;
+        }
+    }
+
+
+}
+
+@media(max-width: 1150px) {
+    .carouselItem {
+        height: 300px;
+
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .caption {
+            margin-top: 60px;
+        }
+    }
+}
+
+@media(max-width: 950px) {
+    .carouselItem {
+        height: 260px;
+        .image {
+            height: 85%;
+        }
+        .caption {
+            margin-top: 80px;
+        }
+        p {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 860px) {
+    .carouselItem {
+        height: 240px;
+        .caption {
+            margin-top: 70px;
+        }
+        .image {
+            height: 75%;
+        }
+    }
+}
+@media(max-width: 750px) {
+    .carouselItem {
+        height: 200px;
+        width: 100%;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: bottom left;
+        border-radius: 20px;
+        margin-top: 30px;
+
+        .caption {
+            margin-top: 40px;
+            width: 250px;
+        }
+        p {
+            display: inline;
+        }
+    }
+
+}
+
+@media(max-width: 600px) {
+    .carouselItem {
+        .caption {
+            margin-top: 40px;
+            width: 200px;
+        }
+    }
+
+    .item button {
+        bottom: 15%;
+    }
+
 }

@@ -1,8 +1,8 @@
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
-import category from "../database/data-category";
 import { Link } from "react-router-dom";
 import HeaderSlider from "../component/HeaderSlider";
+import VerticalCategoryMenu from "../component/VerticalCategoryMenu";
 
 function About() {
 
@@ -23,16 +23,7 @@ function About() {
                 </div>
 
                 <div className="flex-left">
-                    <div className="menu-right">
-                        <h1 className="align-left">Каталог</h1>
-                        <div className="wrapper">
-                            {category.map(item =>
-                                <div className="catalog-group-vertical">
-                                    <div className="img" style={{ backgroundImage: `url(${item.img_small})` }}></div>
-                                    <p className="title">{item.title}</p>
-                                </div>)}
-                        </div>
-                    </div>
+                    <VerticalCategoryMenu />
                     <div className="menu-left">
                         <div>
                             <h1 className="align-left">О компании</h1>

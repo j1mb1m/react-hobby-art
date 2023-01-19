@@ -1,8 +1,8 @@
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
-import category from "../database/data-category";
 import { Link } from "react-router-dom";
 import HeaderSlider from "../component/HeaderSlider";
+import VerticalCategoryMenu from "../component/VerticalCategoryMenu";
 
 function Refund() {
 
@@ -25,16 +25,8 @@ function Refund() {
                 </div>
 
                 <div className="delivery-context">
-                    <div className="menu-right">
-                        <h1 className="align-left">Каталог</h1>
-                        <div className="wrapper">
-                            {category.map(item =>
-                                <div className="catalog-group-vertical">
-                                    <div className="img" style={{ backgroundImage: `url(${item.img_small})` }}></div>
-                                    <p className="title">{item.title}</p>
-                                </div>)}
-                        </div>
-                    </div>
+                    <VerticalCategoryMenu />
+
                     <div className="menu-left">
                         <div>
                             <h1 className="align-left">Гарантия и возврат</h1>
@@ -48,9 +40,9 @@ function Refund() {
                                 Вам необходимо отправить на электронную почту exp@hobbyart.ru письмо с указанием:
                             </p>
                             <p>
-                                номера заказа; <br/>
-                                номера артикула товара;<br/>
-                                описания ситуации;<br/>
+                                номера заказа; <br />
+                                номера артикула товара;<br />
+                                описания ситуации;<br />
                                 приложить фото (видео) некачественного товара.
                             </p>
                             <p>

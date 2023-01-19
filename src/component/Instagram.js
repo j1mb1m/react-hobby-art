@@ -1,6 +1,7 @@
 import styles from "./Instagram.module.scss";
 
 export default function Instagram() {
+
     return (
         <div className={`${styles.container} ${styles.instagramm}`}>
             <h1>Наш instagram</h1>

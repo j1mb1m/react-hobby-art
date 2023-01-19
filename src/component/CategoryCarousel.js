@@ -1,5 +1,5 @@
 import styles from './CategoryCarousel.module.scss';
-import CategoryCard from "./ImageCard";
+import ImageCard from "./ImageCard";
 import popularItems from "../database/popular-items";
 import newItems from "../database/new-items";
 
@@ -44,8 +44,8 @@ function MyCarousel({isPopular}) {
       <div className={styles.wrap} id="wrap1" key={isPopular}>
         {
           isPopular ? 
-          popularItems.map((item, index)=> <CategoryCard key={index} image={item.img} title={item.title} />) : 
-          newItems.map((item, index)=> <CategoryCard key={index} image={item.img} title={item.title} />)
+          popularItems.map((item, index)=> <ImageCard key={index} image={item.img} title={item.title} />) : 
+          newItems.map((item, index)=> <ImageCard key={index} image={item.img} title={item.title} />)
         }
       </div>
     </div>

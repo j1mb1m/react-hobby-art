@@ -2,7 +2,7 @@
   position: relative;
   max-width: 1620px;
   width: auto;
-  height: 487px;
+  height: auto;
   margin: 50px auto;
   overflow: hidden;
   margin-bottom: 121px;
@@ -36,3 +36,18 @@
   background-image: url("../img/btn-left.svg");
   left: -57px;
 }
+
+@media(max-width: 1450px) {
+  .wrap {
+    width: 80%;
+  }
+
+  .right {
+    right: -30px;
+  }
+  
+  .left {
+    left: -30px;
+  }
+}
+
