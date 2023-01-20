@@ -3,6 +3,7 @@ import Footer from "../layout/Footer";
 import category from "../database/data-category";
 import { Link } from "react-router-dom";
 import HeaderSlider from "../component/HeaderSlider";
+import HorizonrtalCategoryMenu from "../component/HorizonrtalCategoryMenu";
 
 function Catalog() {
 
@@ -23,25 +24,7 @@ function Catalog() {
                     </ul>
                 </div>
 
-                {/* ---- каталог ------ */}
-                <div className="catalog ">
-                    <h1>Каталог товаров</h1>
-                    <div className="wrapper">
-
-                        {category.map(item =>
-                            <div className="catalog-group" key={item.id}>
-                                <div className="img" style={{ backgroundImage: `url(${item.img})` }}></div>
-                                <p className="title upper-case">{item.title}</p>
-                                <p className="price font-600-16">от 250 ₽</p>
-                                <div className="category-action">
-                                    <Link to={`/category/${item.strCategory}`} state={{ from: item.title }} >
-                                        Подробнее
-                                    </Link>
-                                </div>
-                            </div>)}
-                    </div>
-                </div>
-
+                <HorizonrtalCategoryMenu />
             </div>
 
             <Footer />
