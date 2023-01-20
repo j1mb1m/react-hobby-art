@@ -1,0 +1,39 @@
+@import "../index.scss";
+
+.questions {
+    margin-bottom: 64px;
+  
+    input:first-child {
+      margin-left: 50px;
+    }
+  
+    div {
+      justify-content: center;
+      gap: 32px;
+    }
+  
+    ul {
+      width: 241px;
+  
+      li:nth-child(2) {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  @media(max-width: 600px) {
+    .questions {
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        input:first-child,
+        input {
+            max-width: 300px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}

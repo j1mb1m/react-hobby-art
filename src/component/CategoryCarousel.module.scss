@@ -18,7 +18,7 @@
 
 .right,
 .left {
-  position: absolute; 
+  position: absolute;
   top: 55%;
   width: 30px;
   height: 30px;
@@ -45,9 +45,41 @@
   .right {
     right: -30px;
   }
-  
+
   .left {
     left: -30px;
   }
 }
 
+@media(max-width: 1150px) {
+  .carouselContainer {
+    margin-bottom: 60px;
+  }
+}
+@media(max-width: 620px) {
+  .carouselContainer {
+    width: 85%;
+    max-width: 430px;
+  }
+  .right {
+    right: 0px;
+  }
+
+  .left {
+    left: 0px;
+  }
+}
+
+@media(max-width: 500px) {
+  .carouselContainer {
+    width: 85%;
+    max-width: 200px;
+  }
+  .right {
+    right: 0px;
+  }
+
+  .left {
+    left: 0px;
+  }
+}

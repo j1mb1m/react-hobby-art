@@ -1,0 +1,167 @@
+@import "../index.scss";
+
+.catalog {
+    margin-bottom: 64px;
+}
+
+.wrapper {
+    gap: 40px;
+    justify-content: center;
+    align-content: center;
+}
+
+.catalogGroup {
+    position: relative;
+    width: 375px;
+    height: 280px;
+    padding: 34.5px 32px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 30px rgba(68, 68, 68, 0.05);
+    border-radius: 20px;
+
+    cursor: pointer;
+
+
+    &:nth-child(4) {
+        margin-right: 0px;
+    }
+
+    .cardImage {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 60%;
+        height: 60%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-end-end-radius: 20px;
+    }
+
+    &:hover {
+        background-image: linear-gradient(59.75deg, #C5C5A8 -2.61%, #E2E1CF 76.3%, #E2E1CF 76.3%);
+        background-position: top;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+
+        .categoryAction {
+            color: #FFFFFF;
+        }
+    }
+
+    .title {
+        font-family: 'Spectral SC';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        text-transform: uppercase;
+
+        color: #424242;
+        margin-bottom: 4px;
+    }
+
+    .price {
+        color: rgba(94, 92, 90, 0.8);
+    }
+
+    .categoryAction {
+        position: absolute;
+        bottom: 36.5px;
+        color: #976464;
+    }
+}
+
+@media(max-width: 1330px) {
+    .catalogGroup {
+        width: 325px;
+        height: 150px;
+        padding: 30px;
+
+        .cardImage {
+            width: 40%;
+            height: 70%;
+        }
+
+        .title {
+            font-size: 20px;
+        }
+
+        .categoryAction {
+            bottom: 20px;
+        }
+    }
+}
+
+@media(max-width: 885px) {
+
+    .catalogGroup {
+        width: 300px;
+    }
+
+    .wrapper {
+        gap: 20px;
+    }
+}
+
+@media(max-width: 750px) {
+
+    .catalogGroup .title {
+        font-size: 16px;
+    }
+
+    .catalogGroup .price {
+        font-size: 14px;
+    }
+
+    .catalogGroup .categoryAction {
+        font-size: 14px;
+    }
+
+}
+
+@media(max-width: 710px) {
+
+    .catalogGroup {
+        width: 250px;
+
+        .cardImage {
+            width: 40%;
+            height: 60%;
+        }
+    }
+}
+
+@media(max-width: 595px) {
+
+    /*     .catalogGroup {
+        width: 90%;
+        height: 120px;
+
+        .cardImage {
+            width: 158px;
+            height: 120px;
+        }
+    } */
+
+    .catalogGroup {
+        width: 200px;
+        padding: 18px;
+
+        .categoryAction {
+            font-size: 14px;
+        }
+    }
+
+}
+
+@media(max-width: 485px) {
+
+    .catalogGroup {
+        width: 90%;
+        height: 140px;
+
+        .cardImage {
+            width: 40%;
+            height: 80%;
+        }
+    }
+}

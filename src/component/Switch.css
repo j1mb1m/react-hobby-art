@@ -37,3 +37,31 @@
 .react-switch-label:active .react-switch-button {
     width: 40px;
 }
+
+@media(max-width: 750px) {
+
+    .react-switch-label {
+        width: 47px;
+        height: 25px;
+        border-radius: 25px;
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    
+    .react-switch-label .react-switch-button {
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+    }
+
+    .react-switch-label:active .react-switch-button {
+        width: 20px;
+    }
+ 
+  }
+
+  @media(max-width: 400px) {
+    .react-switch-label {
+        margin: 0px 2px;
+    }
+  }
