@@ -3,7 +3,7 @@
 .card-item {
   position: relative;
 
-  width: 245px;
+  width: 18%;
   height: 422px;
 
   background: #FFFFFF;
@@ -17,11 +17,13 @@
 
 
   }
-    .image-favorite {
-      height: 15px;
-      width: 16px;
-      cursor: pointer;
-    }
+
+  .image-favorite {
+    height: 15px;
+    width: 16px;
+    cursor: pointer;
+  }
+
   .title {
     @extend %montserrat-400-16;
     line-height: 105%;
@@ -30,7 +32,7 @@
   }
 
   .image {
-    width: 200px;
+    width: 100%;
     height: 149.6px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -80,6 +82,78 @@
       }
     }
 
+  }
+
+}
+
+.cardAction {
+  margin: 0 auto;
+  display: block;
+}
+
+@media(max-width: 1610px) {
+
+  .card-item {
+    width: 23%;
+  }
+}
+
+@media(max-width: 1400px) {
+
+  .card-item {
+    width: 31%;
+  }
+}
+
+@media(max-width: 1150px) {
+  .card-item {
+    width: 48%;
+  }
+}
+
+
+@media(max-width: 890px) {
+  .card-item {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  .card-item .flex-space-between {
+    flex: none;
+    width: 100%;
+    height: 16px;
+  }
+
+  .card-item .image {
+    flex: none;
+    width: 30%;
+    height: 149.6px;
+    background-position: left;
+    margin: 0;
+  }
+
+  .cardContent {
+    width: 70%;
+  }
+
+  .cardAction {
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+  }
+
+
+}
+
+@media(max-width: 450px) {
+  .card-item {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
 }

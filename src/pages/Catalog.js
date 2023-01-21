@@ -1,6 +1,5 @@
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
-import category from "../database/data-category";
 import { Link } from "react-router-dom";
 import HeaderSlider from "../component/HeaderSlider";
 import HorizonrtalCategoryMenu from "../component/HorizonrtalCategoryMenu";

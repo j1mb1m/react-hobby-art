@@ -31,7 +31,7 @@ export default function HeaderSlider() {
 
     return (
         <div className="container">
-            <OwlCarousel className={`owl-theme ${styles.owlTheme}`} items="1" loop autoplay={false} dots={false} nav={false}>
+            <OwlCarousel className={`owl-theme ${styles.owlTheme}`} items="1" loop autoplay dots={false} nav={false}>
                 {sliders.map((slider, index) =>
                     <div className={styles.item} key={slider.id}>
                         <div className={styles.carouselItem} style={{ backgroundImage: `url(${slider.backgroundImage} )` }}>

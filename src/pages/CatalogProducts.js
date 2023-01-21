@@ -5,6 +5,7 @@ import categories from "../database/data-category";
 import Footer from '../layout/Footer';
 import Header from '../layout/Header';
 import ProductСard from '../component/ProductСard';
+import styles from './CatalogProducts.module.scss';
 
 export default function CatalogProducts(props) {
     const params = useParams();
@@ -26,6 +27,7 @@ export default function CatalogProducts(props) {
 
     const [sortDirection, setSortDirection] = useState();
     const [countItems, setCountItems] = useState(defaultList.length);
+    const [filterOpened, setFilterOpened] = useState(false);
 
     const handleChange = (event) => {
         var value = event.target.value;
@@ -58,6 +60,7 @@ export default function CatalogProducts(props) {
 
     const handleFilter = (event) => {
         getFilteredItems();
+        setFilterOpened(false);
     }
 
     const handleClear = (event) => {
@@ -68,6 +71,7 @@ export default function CatalogProducts(props) {
         setCountItems(defaultList.length);
         updateMyFilter(defaultFilter);
         updateList(defaultList);
+
     }
 
     const sortUp = () => {
@@ -81,11 +85,15 @@ export default function CatalogProducts(props) {
         setSortDirection(false);
     }
 
+    const onClickFilter = () => {
+        setFilterOpened(!filterOpened);
+    }
+
     return (
         <>
             <Header />
             {/* ---- каталог ------ */}
-            <div className="container">
+            <div className={styles.container}>
                 <div className="currentPage">
                     <ul>
                         <li><Link to="/">Главная</Link></li>
@@ -100,131 +108,142 @@ export default function CatalogProducts(props) {
                     </ul>
                 </div>
 
-                <div className="panel-sort">
-                    <button className="btn-white" onClick={sortDown}>Цена<img src="./img/down_arrow.svg" alt="Стрела вверх" /></button>
-                    <button className="btn-white" onClick={sortUp}>Цена<img src="./img/down_arrow.svg" alt="Стрела вверх" /></button>
+                <div className={styles["panel-sort"]}>
+                    <button className={styles["btn-white"]} id = {styles.btnFilter} onClick={onClickFilter}>Фильтр</button>
+                    <button className={styles["btn-white"]} onClick={sortDown}>Цена<img src="./img/down_arrow.svg" alt="Стрела вверх" /></button>
+                    <button className={styles["btn-white"]} onClick={sortUp}>Цена<img src="./img/down_arrow.svg" alt="Стрела вверх" /></button>
                 </div>
 
-                <div className="flex-left">
-                    <div className="filter">
-                        {categories.filter(item => item.strCategory.toLowerCase() === params.name.toLowerCase())
-                            .map((item, index) =>
-                                <div key={index}>
-                                    {item.type.length ?
-                                        <><div className="filter-group"><h4>Тип изделий</h4><ul>
-                                            {item.type.map((type, index) => <li key={index}>
-                                                <div>
-                                                    <input
-                                                        type="checkbox"
-                                                        id={`type_${index}`}
-                                                        className="custom-checkbox"
-                                                        onChange={handleChange}
-                                                        value={type}
-                                                    />
-                                                    <label htmlFor={`type_${index}`}>{type}</label>
-                                                </div>
-                                            </li>
-                                            )}
-                                        </ul>
-                                        </div></>
-                                        : <></>}
-                                    {item.composition.length ?
-                                        <><div className="filter-group"><h4>Состав</h4><ul>
-                                            {item.composition.map((type, index) => <li key={index}>
-                                                <div>
-                                                    <input
-                                                        type="checkbox"
-                                                        id={`composition_${index}`}
-                                                        className="custom-checkbox"
-                                                        onChange={handleChange}
-                                                        value={type}
-                                                    />
-                                                    <label htmlFor={`composition_${index}`}>{type}</label>
-                                                </div>
-                                            </li>
-                                            )}
-                                        </ul>
-                                        </div></>
-                                        : <></>}
+                <div className={filterOpened ? `${styles["flex-left"]} ${styles.visible}` : styles["flex-left"]}>
+                    <div className={styles.overlay}>
+                        <div className={styles.filter}>
+                            <div
+                                className={styles.btnClose}
+                                onClick={onClickFilter}
+                            >Close</div>
+                            {categories.filter(item => item.strCategory.toLowerCase() === params.name.toLowerCase())
+                                .map((item, index) =>
+                                    <div key={index}>
+                                        {item.type.length ?
+                                            <><div className={styles["filter-group"]}>
+                                                <h4>Тип изделий</h4>
+                                                <ul>
+                                                    {item.type.map((type, index) => <li key={index}>
+                                                        <div>
+                                                            <input
+                                                                type="checkbox"
+                                                                id={`type_${index}`}
+                                                                className="custom-checkbox"
+                                                                onChange={handleChange}
+                                                                value={type}
+                                                            />
+                                                            <label htmlFor={`type_${index}`}>{type}</label>
+                                                        </div>
+                                                    </li>
+                                                    )}
+                                                </ul>
+                                            </div></>
+                                            : <></>}
+                                        {item.composition.length ?
+                                            <><div className={styles["filter-group"]}>
+                                                <h4>Состав</h4>
+                                                <ul>
+                                                    {item.composition.map((type, index) => <li key={index}>
+                                                        <div>
+                                                            <input
+                                                                type="checkbox"
+                                                                id={`composition_${index}`}
+                                                                className="custom-checkbox"
+                                                                onChange={handleChange}
+                                                                value={type}
+                                                            />
+                                                            <label htmlFor={`composition_${index}`}>{type}</label>
+                                                        </div>
+                                                    </li>
+                                                    )}
+                                                </ul>
+                                            </div></>
+                                            : <></>}
 
-                                    {item.diameter.length ?
-                                        <><div className="filter-group"><h4>Диаметр</h4><ul>
-                                            {item.diameter.map((type, index) => <li key={index}>
-                                                <div>
-                                                    <input
-                                                        type="checkbox"
-                                                        id={`diameter_${index}`}
-                                                        className="custom-checkbox"
-                                                        onChange={handleChange}
-                                                        value={type}
-                                                    />
-                                                    <label htmlFor={`diameter_${index}`}>{type}</label>
-                                                </div>
-                                            </li>
-                                            )}
-                                        </ul>
-                                        </div></>
-                                        : <></>}
+                                        {item.diameter.length ?
+                                            <><div className={styles["filter-group"]}><h4>Диаметр</h4><ul>
+                                                {item.diameter.map((type, index) => <li key={index}>
+                                                    <div>
+                                                        <input
+                                                            type="checkbox"
+                                                            id={`diameter_${index}`}
+                                                            className="custom-checkbox"
+                                                            onChange={handleChange}
+                                                            value={type}
+                                                        />
+                                                        <label htmlFor={`diameter_${index}`}>{type}</label>
+                                                    </div>
+                                                </li>
+                                                )}
+                                            </ul>
+                                            </div></>
+                                            : <></>}
 
-                                    {item.product.length ?
-                                        <><div className="filter-group"><h4>Продукт</h4><ul>
-                                            {item.product.map((type, index) => <li key={index}>
-                                                <div>
-                                                    <input
-                                                        type="checkbox"
-                                                        id={`product_${index}`}
-                                                        className="custom-checkbox"
-                                                        onChange={handleChange}
-                                                        value={type}
-                                                    />
-                                                    <label htmlFor={`product_${index}`}>{type}</label>
-                                                </div>
-                                            </li>
-                                            )}
-                                        </ul>
-                                        </div></>
+                                        {item.product.length ?
+                                            <><div className={styles["filter-group"]}><h4>Продукт</h4><ul>
+                                                {item.product.map((type, index) => <li key={index}>
+                                                    <div>
+                                                        <input
+                                                            type="checkbox"
+                                                            id={`product_${index}`}
+                                                            className="custom-checkbox"
+                                                            onChange={handleChange}
+                                                            value={type}
+                                                        />
+                                                        <label htmlFor={`product_${index}`}>{type}</label>
+                                                    </div>
+                                                </li>
+                                                )}
+                                            </ul>
+                                            </div></>
 
-                                        : <></>}
-                                    {item.producer.length ?
-                                        <><div className="filter-group"><h4>Производитель</h4><ul>
-                                            {item.producer.map((type, index) => <li key={index}>
-                                                <div>
-                                                    <input
-                                                        type="checkbox"
-                                                        id={`producer_${index}`}
-                                                        className="custom-checkbox"
-                                                        onChange={handleChange}
-                                                        value={type}
-                                                    />
-                                                    <label htmlFor={`producer_${index}`}>{type}</label>
-                                                </div>
-                                            </li>
-                                            )}
-                                        </ul>
-                                        </div></>
-                                        : <></>}
+                                            : <></>}
+                                        {item.producer.length ?
+                                            <><div className={styles["filter-group"]}><h4>Производитель</h4><ul>
+                                                {item.producer.map((type, index) => <li key={index}>
+                                                    <div>
+                                                        <input
+                                                            type="checkbox"
+                                                            id={`producer_${index}`}
+                                                            className="custom-checkbox"
+                                                            onChange={handleChange}
+                                                            value={type}
+                                                        />
+                                                        <label htmlFor={`producer_${index}`}>{type}</label>
+                                                    </div>
+                                                </li>
+                                                )}
+                                            </ul>
+                                            </div></>
+                                            : <></>}
+                                    </div>
+                                )
+                            }
+                            <div className={styles["filter-group"]}>
+                                <div >
+                                    <button className={styles["btn-fill"]} onClick={handleFilter}>Показать</button>
                                 </div>
-                            )
-                        }
-                        <div className="filter-group">
-                            <div >
-                                <button className="btn-fill" onClick={handleFilter}>Показать</button>
+                                <div>
+                                    <button className={styles["btn-white"]} onClick={handleClear}>Очистить</button>
+                                </div>
+                                <p className="count-item">Подобрано {countItems} товаров</p>
                             </div>
-                            <div>
-                                <button className="btn-white" onClick={handleClear}>Очистить</button>
-                            </div>
-                            <p className="count-item">Подобрано {countItems} товаров</p>
                         </div>
                     </div>
 
 
-                    <div className="catalog">
-                        <div className="wrapper">
+                    <div className={styles.catalog}>
+                        <div className={styles.wrapper}>
                             {
                                 list.map(item =>
-                                    <ProductСard 
-                                    key={item.id} 
-                                    item = {item}/>)
+                                    <ProductСard
+                                        key={item.id}
+                                        item={item} />)
                             }
                         </div>
                     </div>

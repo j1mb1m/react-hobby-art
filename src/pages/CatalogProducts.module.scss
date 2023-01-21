@@ -1,0 +1,170 @@
+@import "../index.scss";
+
+.flex-left {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    gap: 56px;
+    margin-bottom: 100px;
+}
+
+.catalog .wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.filter {
+    width: 228px;
+    flex: none;
+}
+
+.filter-group {
+    @extend %montserrat-600-16;
+
+    margin-bottom: 21px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #BDBDBD;
+    width: 100%;
+
+    &:last-child {
+        border-bottom: none;
+        margin-bottom: 21px;
+        padding-bottom: 0;
+    }
+
+    ul {
+        @extend %montserrat-400-14;
+    }
+
+    .btn-fill,
+    .btn-white {
+        width: 100%;
+        height: 49px;
+
+        margin-bottom: 16px;
+        text-transform: capitalize;
+        @extend %montserrat-600-16;
+        font-size: 14px;
+        font-style: normal;
+    }
+
+    .count-item {
+        @extend %montserrat-400-14;
+        color: #BDBDBD;
+
+        text-align: center;
+    }
+}
+
+.btnClose,
+#btnFilter {
+    display: none;
+}
+
+
+
+@media(max-width: 1150px) {
+    .catalog .wrapper {
+        gap: 20px;
+    }
+}
+
+@media(max-width: 1150px) {
+    #btnFilter {
+        display: block;
+    }
+
+    .overlay {
+        position: fixed;
+        visibility: hidden;
+        z-index: 100;
+        background-color: #BDBDBD;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        .filter {
+            box-shadow: 10px 4px 24px rgba($color: #000000, $alpha: 0.1);
+            background-color: #fff;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding: 30px;
+            width: 50%;
+            transition: transform 0.4s ease-in-out;
+            transform: translateX(-100%);
+            visibility: hidden;
+            height: 100%;
+        }
+
+    }
+
+    .visible {
+        width: 100%;
+        background-color: #BDBDBD;
+        position: relative;
+
+        .overlay {
+            visibility: visible;
+            width: 100vh;
+            height: 100%;
+        }
+
+        .filter {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0%);
+        }
+
+        .catalog {
+            display: none;
+        }
+
+        .btnClose {
+            display: block;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            cursor: pointer;
+            text-decoration: underline;
+
+            &:hover {
+                color: #CFA5A5;
+            }
+        }
+
+    }
+}
+
+
+@media(max-width: 800px) {
+    .panel-sort {
+        margin-top: 30px;
+    }
+}
+
+@media(max-width: 490px) {
+
+    .overlay .filter {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .visible .overlay {
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 450px) {
+    .panel-sort {
+        margin-top: 30px;
+        justify-content: space-between;
+
+        .btn-white {
+            margin-left: 0;
+        }
+    }
+}
